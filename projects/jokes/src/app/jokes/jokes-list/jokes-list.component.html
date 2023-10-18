@@ -1,0 +1,6 @@
+<!-- This will be a card-->
+<div class="card card-block" *ngFor="let joke of jokes">
+  <!-- {{ joke | json }} -->
+  <h4 class="card-title">{{ joke.setup }}</h4>
+  <p class="card-text">{{ joke.punchline }}</p>
+</div>
