@@ -28,4 +28,8 @@ export class JokesListComponent {
       },
     ];
   }
+
+  public showHidePunchline(joke: Joke) {
+    joke.hide = !joke.hide;
+  }
 }
