@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Joke } from './Joke';
+import { Joke } from '../../models/Joke';
 
 @Component({
   selector: 'app-jokes-list',
@@ -29,6 +29,9 @@ export class JokesListComponent {
     ];
   }
 
+  /**
+   * @deprecated The method should not be used
+   */
   public showHidePunchline(joke: Joke) {
     joke.hide = !joke.hide;
   }

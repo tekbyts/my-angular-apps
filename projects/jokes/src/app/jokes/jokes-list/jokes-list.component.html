@@ -1,7 +1,1 @@
-<!-- This will be a card-->
-<div class="card card-block" *ngFor="let joke of jokes">
-  <!-- {{ joke | json }} -->
-  <h4 class="card-title">{{ joke.setup }}</h4>
-  <p class="card-text" [hidden]="joke.hide">{{ joke.punchline }}</p>
-  <a class="btn btn-primary" (click)="showHidePunchline(joke)">Tell Me!</a>
-</div>
+<app-joke *ngFor="let joke of jokes" [joke]="joke"></app-joke>
