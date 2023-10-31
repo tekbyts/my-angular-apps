@@ -35,4 +35,8 @@ export class JokesListComponent {
   public showHidePunchline(joke: Joke) {
     joke.hide = !joke.hide;
   }
+
+  addJokeToTheList(joke: Joke) {
+    this.jokes.unshift(joke);
+  }
 }
