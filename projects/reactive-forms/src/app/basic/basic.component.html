@@ -1,0 +1,72 @@
+<h2>Using Form Control</h2>
+<div>
+  <h3>Default Value</h3>
+  <h4>NonNullable = True</h4>
+  <label for="">Name: </label>
+  <input id="resetNotNull" type="text" [formControl]="resetNotNull" />
+  <button (click)="resetNewValue()">Reset with Value</button>
+  <button (click)="resetDefaultValue()">Reset Default Value</button>
+</div>
+<div>
+  <p><label for="">Value: </label>{{ resetNotNull.value }}</p>
+  <p><label for="">Default Value: </label>{{ resetNotNull.defaultValue }}</p>
+</div>
+<div>
+  <h3>Name</h3>
+  <input id="name" type="text" [formControl]="name" />
+  <div>
+    <button (click)="setName()">Set Value</button>
+    <button (click)="patchName()">Patch Value</button>
+    <button (click)="getNameValue()">Log Value</button>
+    <button (click)="resetName()">Reset</button>
+  </div>
+</div>
+<div>
+  <p><label for="">Value: </label>{{ name.value }}</p>
+  <p><label for="">Default Value: </label>{{ name.defaultValue }}</p>
+</div>
+<div>
+  <label for="">Age: </label>
+  <input type="text" />
+</div>
+<div>
+  <label for="">City: </label>
+  <input type="text" />
+</div>
+<div>
+  <label for="">Country: </label>
+  <input type="text" />
+</div>
+<div>
+  <input type="checkbox" />
+  <label for="">Are you Married?</label>
+</div>
+<div>
+  <p>
+    Name:
+    <b>
+      <!--Display Name's value-->
+      {{ name.value }}
+    </b>
+    Default Value:
+    <b>
+      <!--Display Name's value-->
+      {{ name.defaultValue }}
+    </b>
+    Validation Status:
+    <b><!--Display Name's Validation status--></b>
+  </p>
+  <p>
+    Age: <b><!--Display Age's value--></b> Validation Status:
+    <b><!--Display Age's Validation status--></b>
+  </p>
+  <p>
+    City: <b><!--Display City's value--></b>
+  </p>
+  <p>
+    Country: <b><!--Display Country's value--></b>
+  </p>
+  <p>
+    Married?: <b><!--Display Married's value--></b>
+  </p>
+</div>
